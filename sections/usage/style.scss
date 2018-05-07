@@ -1,0 +1,126 @@
+@import '../../styles/variables';
+
+$bar_size: 8vh;
+
+.section#usage {
+  .background {
+    background-color: $purple;
+
+    #usage_source_container {
+      position: absolute;
+      bottom: 0.35rem;
+      left: 0.35rem;
+      right: 0.35rem;
+      text-align: right;
+      font-size: 0.7rem;
+      color: rgba($white, 0.75);
+
+      opacity: 0;
+    }
+
+    #usage_equality {
+      position: absolute;
+      top: -2vw;
+      right: -2vw;
+
+      img {
+        width: 32vw;
+      }
+    }
+
+    #usage_bar_desc {
+      position: absolute;
+      z-index: 4;
+      line-height: $bar_size/2.5;
+      font-size: $bar_size/2.5;
+      left: $bar_size/2;
+      bottom: $bar_size*3;
+      color: #fff;
+    }
+
+    .usage_bar {
+      position: absolute;
+
+      height: $bar_size;
+      width: 50vh;
+
+      left: -$bar_size;
+      bottom: $bar_size*2;
+
+      border-radius: $bar_size;
+      z-index: 2;
+      border: $bar_size/8 solid $purple;
+
+      &#usage_bar_female {
+        background-color: $pink;
+        bottom: $bar_size*1.25;
+        width: 66.7vw;
+      }
+
+      &#usage_bar_male {
+        background-color: $blue;
+        width: 65.1vw;
+      }
+
+      .usage_bar_text {
+        color: rgba(#fff, 0.3);
+        font-weight: 900;
+        font-size: $bar-size/2;
+      }
+
+      padding-right: $bar-size/2;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
+  .content {
+    transform: translate(-20%, -10%);
+
+    #usage_title {
+      color: $yellow;
+      font-weight: 900;
+      font-size: 4rem;
+      border-bottom: 3px solid rgba(#000, 0.5);
+      padding: 0 50px;
+      margin-bottom: 4rem;
+    }
+
+    #usage_desc_container {
+      position: relative;
+      width: 50vw;
+      border-left: 1px solid rgba(#fff, 0.2);
+      border-right: 1px solid rgba(#fff, 0.2);
+      overflow: hidden;
+
+      #usage_desc {
+        position: relative;
+        width: 50vw;
+        padding: 0 50px;
+        overflow: hidden;
+        color: $white;
+
+        &:before,
+        &:after {
+          position: absolute;
+          font-size: 4rem;
+        }
+
+        &:before {
+          content: '\201C';
+          left: -4rem;
+          top: 0;
+        }
+        &:after {
+          content: '\201E';
+          right: -4rem;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

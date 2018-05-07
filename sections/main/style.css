@@ -1,0 +1,75 @@
+.section#main .background {
+  background-color: #0089e1;
+}
+.section#main .background:before {
+  content: "";
+  height: 200%;
+  background-color: #f02f72;
+  transform-origin: 0% 50%;
+  transform: translate3d(50%, -33.3%, 0) rotate(10deg);
+}
+.section#main .background:after {
+  content: "";
+  height: 200%;
+  left: 50%;
+  width: 20%;
+  background-color: #340c6f;
+  transform-origin: 0% 50%;
+  transform: translate3d(-50%, -33.3%, 0) rotate(10deg);
+}
+.section#main .background #background_venus,
+.section#main .background #background_mars {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0.3;
+}
+.section#main .background #background_mars {
+  left: 0;
+  transform: translate3d(-50%, 0, 0) scale(0.7, 0.7);
+}
+.section#main .background #background_venus {
+  right: 0;
+  transform: translate3d(50%, 0, 0) scale(0.7, 0.7);
+}
+.section#main .content .main_message_tip {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 15px 0;
+  position: relative;
+  font-size: 2rem;
+  color: #340c6f;
+  padding: 0 10px;
+}
+.section#main .content .main_message_tip.right_side:before, .section#main .content .main_message_tip.left_side:before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  transform-origin: 50% 50%;
+}
+.section#main .content .main_message_tip.right_side {
+  transform: translate(25%, 0);
+}
+.section#main .content .main_message_tip.right_side:before {
+  right: 25%;
+  transform: translate3d(50%, 0, 0) rotate(38deg);
+}
+.section#main .content .main_message_tip.left_side {
+  transform: translate(-25%, 0);
+}
+.section#main .content .main_message_tip.left_side:before {
+  left: 25%;
+  transform: translate3d(-50%, 0, 0) rotate(52deg);
+}
+.section#main .content .main_message_tip .message_tip_content {
+  position: relative;
+  margin: 1.5rem 0.5rem;
+  padding: 0 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

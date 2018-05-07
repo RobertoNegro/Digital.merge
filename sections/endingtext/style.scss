@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+@media screen and (max-width: 1400px) {
+	.section#endingtext {
+	  .content {
+	    .endingtext_text_container {
+	      .endingtext_text {
+	      	width: 90% !important;
+	      }
+	    }
+	  }
+	}
+}
+
+
+.section#endingtext {
+
+  .background {
+    #background_endingtext {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #eee;
+    }
+  }
+
+  .content {
+    .endingtext_title {
+      color: #333;
+      font-size: 2rem;
+      font-weight: 900;
+      width: 100%;
+      text-align:center;
+    }
+    
+    .endingtext_text_container {
+    	overflow: hidden;
+    	width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($white, 0.8);
+      padding: 20px;
+
+      .endingtext_text {
+      	width: 70%;
+	      color: #444;
+    	}
+    }
+  }
+}

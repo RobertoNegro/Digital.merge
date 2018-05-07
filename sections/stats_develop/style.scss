@@ -1,0 +1,219 @@
+@import '../../styles/variables';
+
+$luggage-size: 12vh;
+
+.section#stats_develop {
+  .background {
+  	#stats_develop_bg {
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ccc;
+  	}
+
+		#stats_develop_canvas_bg {
+			position: absolute;			
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+		}
+
+    #stats_develop_source_container {
+			position: absolute;
+			bottom: 0.35rem;
+			left: 0.35rem;
+			right: 0.35rem;
+			text-align: right;
+			font-size: 0.7rem;
+			color: rgba($white, 0.75);
+    }
+  }
+
+  .content {
+
+	  .stats_develop_text_container {
+			position: absolute;
+			left: 0;
+			top: 0;
+
+	  	display: flex;
+		  flex-direction: column;
+		  flex-wrap: nowrap;
+		  align-content: center;
+		  align-items: center;
+		  justify-content: center;
+
+			width: 100%;
+			height:100%;
+
+			background-color: rgba(#555, 0.7);
+			text-shadow: 2px 1px 3px rgba(#555, 0.1);
+
+      color: $white;
+      font-weight: 400;
+      font-size: 3rem;
+      text-align: center;
+	  }
+
+    .luggages_container {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+    	display: flex;
+		  flex-direction: column;
+		  flex-wrap: nowrap;
+		  align-content: center;
+		  align-items: center;
+		  justify-content: center;
+
+    	width: 50%;
+    	height: 100%;
+
+      .luggage_box_container {
+        position: relative;
+        width: 90%;
+        margin: 2vh 0;
+        height: $luggage-size + 5vh;
+
+        background-color: rgba($white, 1);
+        //border-radius: $luggage-size/4 $luggage-size/4 $luggage-size/16 $luggage-size/16;
+
+
+				&:before{
+					content: '';
+					position:absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: $luggage-size + 5vh;
+
+        	//border-radius: $luggage-size/4 0 0 $luggage-size/16;
+					//background-color: $purple;
+					background-color: $white;
+				}
+
+        .luggage_box_border {
+          position: absolute;
+          bottom: 0;
+          //left: $luggage-size + 5vh;
+          left: 0;
+          right: 0;
+          height: $luggage-size/8;
+
+          .luggage_box_border_boy,
+          .luggage_box_border_girl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            
+
+            .luggage_box_border_perc {
+              position: absolute;
+
+              font-weight: 900;
+
+              right: 0;
+              bottom: -$luggage-size/4;
+              font-size: $luggage-size/4;
+              line-height: $luggage-size/4;
+
+              padding-top: $luggage-size/14;
+            }
+          }
+          .luggage_box_border_boy {
+            background-color: $blue;
+            
+            .luggage_box_border_perc {
+              color: $blue;
+            }
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin:auto;
+              right: -$luggage-size/19;
+              height: ($luggage-size/8)/1.414213;
+              width: ($luggage-size/8)/1.414213;
+
+              background-color: $blue;
+
+              transform-origin: 50% 50%;
+              transform: rotate(45deg);
+	            /*
+                border-top: $luggage-size/16 solid transparent;
+                border-bottom: $luggage-size/16 solid transparent;
+                border-left: $luggage-size/16 solid $blue;
+	            */
+            }
+          }
+
+          .luggage_box_border_girl {
+            background-color: $pink;
+            //border-radius: 0 0 $luggage-size/16 0;
+            width: 100%;
+            .luggage_box_border_perc {
+              color: $pink;
+            }
+          }
+        }
+
+        .luggage_container {
+          position: absolute;
+          left: 2.5vh;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+
+          width: $luggage-size;
+          height: $luggage-size;
+
+          .luggage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+              width: $luggage-size;
+            }
+
+            &.luggage_girl {
+              z-index: 1;
+            }
+            &.luggage_boy {
+              z-index: 2;
+            }
+          }
+        }
+
+        .luggage_logo {
+          position: absolute;
+
+          right: 5%;
+          top: 0;
+          bottom: 0;
+
+          height: 50%;
+          flex-grow: 1;
+
+          margin: auto;
+          text-align: center;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

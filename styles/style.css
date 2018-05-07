@@ -1,0 +1,262 @@
+@media screen and (orientation: portrait), screen and (max-width: 1024px), screen and (max-height: 768px) {
+  #small_screen_overlay {
+    display: flex !important;
+  }
+}
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+#small_screen_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #555;
+  background-color: #222;
+  z-index: 1999;
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+#small_screen_overlay div {
+  width: 50%;
+  text-align: center;
+}
+#small_screen_overlay img {
+  opacity: 0.1;
+  margin-bottom: 50px;
+  width: 120px;
+  height: 120px;
+}
+
+body {
+  font-family: "Roboto", apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #fff;
+}
+
+#body_wrapper {
+  box-shadow: 0 0 15px 0 #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#body_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: #eee;
+}
+
+#section_selectors {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+#section_selectors .selector {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  padding: 5px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#section_selectors .selector .bullet {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in;
+  transform-origin: 50% 50%;
+  transform: scale3d(0.5, 0.5, 1);
+}
+#section_selectors .selector.selected {
+  cursor: default;
+}
+#section_selectors .selector.selected .bullet {
+  transition: transform 0.275s ease-out;
+  transform: scale3d(1, 1, 1);
+}
+
+.greytext {
+  color: #666;
+}
+
+.pinktext {
+  color: #f02f72;
+}
+
+.bluetext {
+  color: #0089e1;
+}
+
+.purpletext {
+  color: #340c6f;
+}
+
+.yellowtext {
+  color: #FFB400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extrabold {
+  font-weight: 900;
+}
+
+.bigtitle {
+  font-size: 6rem;
+  color: white;
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.section.nonfull {
+  min-height: 0;
+}
+.section .background,
+.section .background:before,
+.section .background:after,
+.section .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section .background {
+  z-index: 1;
+}
+.section .content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.section .animation_spinner {
+  position: absolute;
+  z-index: 900;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  text-align: center;
+  pointer-events: none;
+}
+.section .animation_spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.section .animation_spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.section .animation_spinner .bounce3 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.section .animation_spinner > div {
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.section .nextpage_container {
+  z-index: 1500;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+}
+.section .nextpage_container:hover .shadow {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.section .nextpage_container:hover .button {
+  opacity: 0.6;
+  transition: opacity 0.25s ease-out;
+}
+.section .nextpage_container .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+.section .nextpage_container .button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  opacity: 0.2;
+  transition: opacity 0.35s ease-in;
+  background-image: url(../images/nextpage_button.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

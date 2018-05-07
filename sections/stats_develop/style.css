@@ -1,0 +1,169 @@
+.section#stats_develop .background #stats_develop_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+}
+.section#stats_develop .background #stats_develop_canvas_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.section#stats_develop .background #stats_develop_source_container {
+  position: absolute;
+  bottom: 0.35rem;
+  left: 0.35rem;
+  right: 0.35rem;
+  text-align: right;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.section#stats_develop .content .stats_develop_text_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 85, 85, 0.7);
+  text-shadow: 2px 1px 3px rgba(85, 85, 85, 0.1);
+  color: #fff;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+.section#stats_develop .content .luggages_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container {
+  position: relative;
+  width: 90%;
+  margin: 2vh 0;
+  height: 17vh;
+  background-color: white;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 17vh;
+  background-color: #fff;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5vh;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_boy,
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_girl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_boy .luggage_box_border_perc,
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_girl .luggage_box_border_perc {
+  position: absolute;
+  font-weight: 900;
+  right: 0;
+  bottom: -3vh;
+  font-size: 3vh;
+  line-height: 3vh;
+  padding-top: 0.8571428571vh;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_boy {
+  background-color: #0089e1;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_boy .luggage_box_border_perc {
+  color: #0089e1;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_boy:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -0.6315789474vh;
+  height: 1.0606605936vh;
+  width: 1.0606605936vh;
+  background-color: #0089e1;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+  /*
+     border-top: $luggage-size/16 solid transparent;
+     border-bottom: $luggage-size/16 solid transparent;
+     border-left: $luggage-size/16 solid $blue;
+  */
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_girl {
+  background-color: #f02f72;
+  width: 100%;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_box_border .luggage_box_border_girl .luggage_box_border_perc {
+  color: #f02f72;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_container {
+  position: absolute;
+  left: 2.5vh;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 12vh;
+  height: 12vh;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_container .luggage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_container .luggage img {
+  width: 12vh;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_container .luggage.luggage_girl {
+  z-index: 1;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_container .luggage.luggage_boy {
+  z-index: 2;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_logo {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  height: 50%;
+  flex-grow: 1;
+  margin: auto;
+  text-align: center;
+}
+.section#stats_develop .content .luggages_container .luggage_box_container .luggage_logo img {
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

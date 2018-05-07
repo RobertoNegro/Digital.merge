@@ -1,0 +1,103 @@
+@charset "UTF-8";
+.section#usage .background {
+  background-color: #340c6f;
+}
+.section#usage .background #usage_source_container {
+  position: absolute;
+  bottom: 0.35rem;
+  left: 0.35rem;
+  right: 0.35rem;
+  text-align: right;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 0;
+}
+.section#usage .background #usage_equality {
+  position: absolute;
+  top: -2vw;
+  right: -2vw;
+}
+.section#usage .background #usage_equality img {
+  width: 32vw;
+}
+.section#usage .background #usage_bar_desc {
+  position: absolute;
+  z-index: 4;
+  line-height: 3.2vh;
+  font-size: 3.2vh;
+  left: 4vh;
+  bottom: 24vh;
+  color: #fff;
+}
+.section#usage .background .usage_bar {
+  position: absolute;
+  height: 8vh;
+  width: 50vh;
+  left: -8vh;
+  bottom: 16vh;
+  border-radius: 8vh;
+  z-index: 2;
+  border: 1vh solid #340c6f;
+  padding-right: 4vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+.section#usage .background .usage_bar#usage_bar_female {
+  background-color: #f02f72;
+  bottom: 10vh;
+  width: 66.7vw;
+}
+.section#usage .background .usage_bar#usage_bar_male {
+  background-color: #0089e1;
+  width: 65.1vw;
+}
+.section#usage .background .usage_bar .usage_bar_text {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  font-size: 4vh;
+}
+.section#usage .content {
+  transform: translate(-20%, -10%);
+}
+.section#usage .content #usage_title {
+  color: #FFB400;
+  font-weight: 900;
+  font-size: 4rem;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  padding: 0 50px;
+  margin-bottom: 4rem;
+}
+.section#usage .content #usage_desc_container {
+  position: relative;
+  width: 50vw;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.section#usage .content #usage_desc_container #usage_desc {
+  position: relative;
+  width: 50vw;
+  padding: 0 50px;
+  overflow: hidden;
+  color: #fff;
+}
+.section#usage .content #usage_desc_container #usage_desc:before, .section#usage .content #usage_desc_container #usage_desc:after {
+  position: absolute;
+  font-size: 4rem;
+}
+.section#usage .content #usage_desc_container #usage_desc:before {
+  content: "“";
+  left: -4rem;
+  top: 0;
+}
+.section#usage .content #usage_desc_container #usage_desc:after {
+  content: "„";
+  right: -4rem;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

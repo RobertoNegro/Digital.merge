@@ -1,0 +1,125 @@
+@import '../../styles/variables';
+
+$bubble_size: 8vw;
+
+.section#starttest {
+  .background {
+    #background_starttest_original,
+    #background_starttest_blurred {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #background_starttest_original {
+      background-image: url('bg_original.jpg');
+      z-index:-3;
+    }
+    #background_starttest_blurred {
+      background-image: url('bg_blurred.jpg');
+      z-index:-2;
+    }
+
+		#starttest_canvas_bg {
+			position: absolute;			
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			z-index:-1;
+		}
+
+  }
+
+  .content {
+
+  	#starttest_title {
+  		position: relative;
+  		color: $white;
+  		font-weight: 500;
+  		font-size: 3rem;
+  		//line-height: 8rem;
+  		width: 100%;
+  		text-align:center;
+  		padding-top: 2.5rem;
+  		padding-bottom: 2.5rem;
+  		padding-left: 2.5rem;
+  		padding-right: 2.5rem;
+
+  		overflow:hidden;
+
+  		background-color: rgba(#000, 0.5);
+
+  		&:before {
+  			content: ' ';
+  			position:absolute;
+  			top: 0;
+  			bottom: 0;
+  			left: 0;
+  			right: 0;
+  			background: linear-gradient(to bottom, rgba(#000, 0) 50%, rgba(#000, 0.75) 100%);
+  		}
+  	}
+
+  	.starttest_message_container {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin:auto;
+
+			display: flex;
+		  flex-direction: row;
+		  flex-wrap: nowrap;
+		  align-content: center;
+		  align-items: flex-end;
+		  justify-content: center;
+		  padding-bottom: 120px;
+
+	  	.starttest_message_tip {
+	  		position:relative;
+
+			  background-color: $white;
+			  border-radius: 50%;
+
+			  margin: 15px 0;
+
+			  font-size: 2rem;
+			  color: rgba($blue, 1);
+			  padding: 0 10px;
+
+		    &:before {
+		      content: '';
+
+		      z-index: -1;
+
+		      background-color: $white;
+		      position: absolute;
+		      bottom: 0;
+
+		      height: 50px;
+		      width: 50px;
+		      transform-origin: 50% 50%;
+
+		      left: 25%;
+		      transform: translate3d(50%, 0, 0) rotate(45deg+7deg);
+		    }
+
+			  .message_tip_content {
+			    position: relative;
+			    margin: 1.5rem 0.5rem;
+			    padding: 0 0.5rem;
+			  }
+			}  
+  	}
+	}
+}

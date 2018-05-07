@@ -1,0 +1,95 @@
+.section#starttest .background #background_starttest_original,
+.section#starttest .background #background_starttest_blurred {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section#starttest .background #background_starttest_original {
+  background-image: url("bg_original.jpg");
+  z-index: -3;
+}
+.section#starttest .background #background_starttest_blurred {
+  background-image: url("bg_blurred.jpg");
+  z-index: -2;
+}
+.section#starttest .background #starttest_canvas_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+.section#starttest .content #starttest_title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.section#starttest .content #starttest_title:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+}
+.section#starttest .content .starttest_message_container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 120px;
+}
+.section#starttest .content .starttest_message_container .starttest_message_tip {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 15px 0;
+  font-size: 2rem;
+  color: #0089e1;
+  padding: 0 10px;
+}
+.section#starttest .content .starttest_message_container .starttest_message_tip:before {
+  content: "";
+  z-index: -1;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  transform-origin: 50% 50%;
+  left: 25%;
+  transform: translate3d(50%, 0, 0) rotate(52deg);
+}
+.section#starttest .content .starttest_message_container .starttest_message_tip .message_tip_content {
+  position: relative;
+  margin: 1.5rem 0.5rem;
+  padding: 0 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

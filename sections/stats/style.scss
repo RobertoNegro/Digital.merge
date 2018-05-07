@@ -1,0 +1,204 @@
+@import '../../styles/variables';
+
+$bubble_size: 8vw;
+
+.section#stats {
+  .background {
+    #background_stats_original,
+    #background_stats_blurred {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #background_stats_original {
+      background-image: url('bg_original.jpg');
+    }
+    #background_stats_blurred {
+      background-image: url('bg_blurred.jpg');
+    }
+
+    .random_bubble {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $bubble_size/2;
+      height: $bubble_size/2;
+
+      background-color: $purple;
+      border-radius: 50%;
+    }
+  }
+
+  .content {
+		#stats_source_container {
+			position: absolute;
+			bottom: 0.35rem;
+			left: 0.35rem;
+			right: 0.35rem;
+			text-align: right;
+			font-size: 0.7rem;
+			color: rgba($white, 0.75);
+
+			opacity: 0;
+		}
+
+    #stats_description_container {
+    	position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			z-index: 10;
+
+    	display: flex;
+		  flex-direction: column;
+		  flex-wrap: nowrap;
+		  align-content: center;
+		  align-items: center;
+		  justify-content: center;
+
+      #stats_description {
+      	text-shadow: 2px 1px 7px rgba(#000, 0.2);
+
+        color: $white;
+        font-weight: 400;
+        font-size: 3rem;
+        text-align: center;
+
+        margin: 4rem;
+      }
+    }
+
+    #stats_bubble_container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: auto;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+
+      .stats_bubble {
+        position: relative;
+        height: $bubble_size;
+        width: $bubble_size;
+        background-color: $purple;
+        border-radius: 50%;
+
+        margin: 0 $bubble_size*0.33;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+        .stats_bar_container {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+
+          width: $bubble_size*0.33;
+          height: 50vh;
+
+          &.stats_bar_container_girl {
+            transform: translate3d(0, -50%, 0);
+
+            .stats_bar {
+              bottom: 0;
+              background-color: $pink;
+
+              .stats_bar_text {
+                top: 0;
+
+                transform-origin: 50% 50%;
+                transform: translate3d(0, 75%, 0) rotate(-90deg);
+              }
+            }
+          }
+
+          &.stats_bar_container_boy {
+            transform: translate3d(0, 50%, 0);
+            justify-content: flex-start;
+
+            .stats_bar {
+              top: 0;
+              background-color: $blue;
+
+              .stats_bar_text {
+                bottom: 0;
+
+                transform-origin: 50% 50%;
+                transform: translate3d(0, -75%, 0) rotate(-90deg);
+              }
+            }
+          }
+
+          .stats_bar {
+            position: absolute;
+            height: 100%;
+            left: 0;
+            width: 100%;
+            
+            border-radius: $bubble_size*0.33;
+            z-index: 2;
+            border: ($bubble_size*0.05) solid $purple;
+
+            display: flex;
+		        flex-direction: column;
+		        flex-wrap: nowrap;
+		        align-content: center;
+		        align-items: center;
+		        justify-content: center;
+
+            .stats_bar_text {
+              position: absolute;
+
+              font-size: $bubble_size*0.33/2;
+              line-height: $bubble_size*0.33/2;
+              height: $bubble_size*0.33/2;
+              color: $white;
+              font-weight: 900;
+            }
+          }
+        }
+
+        .stats_inner_bubble {
+          z-index: 3;
+
+          height: 90%;
+          width: 90%;
+
+          padding: 12.5%;
+
+          border-radius: 50%;
+          background-color: rgba($purple, 0.5);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

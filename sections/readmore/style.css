@@ -1,0 +1,77 @@
+.section#readmore .background #background_readmore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f379a3;
+}
+.section#readmore .content .readmore_title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+}
+.section#readmore .content .readmore_text_container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.section#readmore .content .readmore_text_container .readmore_text {
+  width: 80%;
+  height: 80%;
+  color: #222;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container .readmore_card {
+  display: block;
+  max-width: 400px;
+  max-height: 200px;
+  padding: 10px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #ddd;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 0 15px 0;
+  transition: margin 0.25s ease-in, background-color 0.125s ease-in, box-shadow 0.125s ease-in;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container .readmore_card:hover {
+  transition: margin 0.5s ease-out, background-color 0.25s ease-out, box-shadow 0.25s ease-out;
+  text-decoration: none;
+  box-shadow: 7.5px 7.5px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 35px;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container .readmore_card .readmore_card_img {
+  width: 100%;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container .readmore_card .readmore_card_img img {
+  border-radius: 15px 0 15px 0;
+  width: 100%;
+  height: auto;
+}
+.section#readmore .content .readmore_text_container .readmore_text .readmore_card_container .readmore_card .readmore_card_name {
+  color: #666;
+  padding-top: 10px;
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

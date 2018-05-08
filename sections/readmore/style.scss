@@ -51,7 +51,7 @@
           .readmore_card {
             display: block;
             max-width: 400px;
-            max-height: 200px;
+            //max-height: 200px;
             padding: 10px;
             overflow: hidden;
             margin: 10px;
@@ -78,7 +78,7 @@
 
             .readmore_card_img {
               width: 100%;
-
+              min-width: 200px;
 
               img {
                 border-radius: 15px 0 15px 0;

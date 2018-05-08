@@ -1,11 +1,18 @@
 let test1RequestId;
+let test1HasToStop;
 
 function test1_hide() {
-  if (test1RequestId)
-    cancelAnimationFrame(test1RequestId);
+  test1HasToStop = true;
+
+  if (test1RequestId) {
+      cancelAnimationFrame(test1RequestId);
+      test1RequestId = null;
+  }
 }
 
 function test1_show() {
+  test1HasToStop = false;
+
   const speed = 15.0;
   const opacitySeconds = 2.0;
   const junctionRange = 100.0;
@@ -66,7 +73,9 @@ function test1_show() {
       draw();
 
     lastRender = timestamp;
-    test1RequestId = requestAnimationFrame(loop);
+
+    if(!test1HasToStop)
+      test1RequestId = requestAnimationFrame(loop);
   }
 
   let updateJunctions = function() {

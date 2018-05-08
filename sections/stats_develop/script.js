@@ -1,11 +1,17 @@
 let statsDevelopRequestId;
+let statsDevelopHasToStop;
 
 function stats_develop_hide() {
-	if(statsDevelopRequestId)
-		cancelAnimationFrame(statsDevelopRequestId);
+    statsDevelopHasToStop = true;
+	if(statsDevelopRequestId) {
+        cancelAnimationFrame(statsDevelopRequestId);
+        statsDevelopRequestId = null;
+    }
 }
 
 function stats_develop_show() {
+    statsDevelopHasToStop = false;
+
 	let backgroundContext;
 
 	const bgColor = '#ccc';
@@ -100,7 +106,8 @@ function stats_develop_show() {
 	  	draw();
 
 	  lastRender = timestamp;
-	  statsDevelopRequestId = requestAnimationFrame(loop);
+	  if(!statsDevelopHasToStop)
+	  	statsDevelopRequestId = requestAnimationFrame(loop);
 	}
 
 	let update = function(progress) {
